@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-color: #f1f1f1;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        p {
+            padding: 10px;
+            font-size: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: teal;
+        }
+        .heading {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+        }
+        .nav-links li {
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 14px 16px;
+        }
+        .nav-links li a:hover:not(.active) {
+            background-color: lightseagreen;
+        }
+        .nav-links li a.active {
+            background-color: #4caf50;
+        }
+        .admin-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        textarea {
+            resize: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            background-color: teal;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: lightseagreen;
+        }
+        .secure-connection {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #4caf50;
+            color: white;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="heading">
+            <h4>FAS</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('demo') }}">Demo</a></li>
+        </ul>
+    </nav>
+    <div class="admin-container">
+        <h2>Update Menu and Recommendations</h2>
+        <form action="{{ url_for('update_prompts') }}" method="post">
+            <label for="menu">Menu:</label>
+            <br>
+            <textarea id="menu" name="menu" rows="10" cols="50">{{ menuPrompt }}</textarea>
+            <br>
+            <label for="recommendations">Recommendations:</label>
+            <br>
+            <textarea id="recommendations" name="recommendations" rows="10" cols="50">{{ recomendationPrompt }}</textarea>
+            <br>
+            <input type="submit" value="Submit Changes">
+        </form>
+    </div>
+    <div class="secure-connection">
+        Secure Connection: Active
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+Formatted the messages sent by ChatGPT
+Made a login-page and admin-page.
+Added a login system nessesary for the admin-page.
+Changed the menu and recommendations to be loaded from a text file.
+Made a way for the admin to edit the recommendations and menu.
+Made the menu-container and ChatBot prompt auto update.
