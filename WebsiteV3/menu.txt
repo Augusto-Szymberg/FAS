@@ -1,0 +1,40 @@
+<h2>Menú del Restaurante</h2>
+<div id="menu-pages" class="menu-pages">
+    <div class="menu-page">
+        <h3>Aperitivos</h3>
+        <ul>
+            <li>Ensalada Caprese</li>
+            <li>Champiñones rellenos</li>
+            <li>Alitas de pollo</li>
+            <li>Bruschetta</li>
+        </ul>
+    </div>
+    <div class="menu-page">
+        <h3>Platos Principales</h3>
+        <ul>
+            <li>Salmón a la parrilla</li>
+            <li>Pollo Alfredo</li>
+            <li>Wellington de ternera</li>
+            <li>Salteado de verduras</li>
+        </ul>
+    </div>
+    <div class="menu-page">
+        <h3>Postres</h3>
+        <ul>
+            <li>Tiramisú</li>
+            <li>Tarta de queso</li>
+            <li>Pastel de chocolate con lava</li>
+            <li>Tarta de manzana</li>
+        </ul>
+    </div>
+    <div class="menu-page">
+        <h3>Bebidas</h3>
+        <ul>
+            <li>Bebidas gaseosas</li>
+            <li>Café</li>
+            <li>Té</li>
+            <li>Cerveza</li>
+            <li>Vino</li>
+        </ul>
+    </div>
+</div>

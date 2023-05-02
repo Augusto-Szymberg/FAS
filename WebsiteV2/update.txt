@@ -1,0 +1,3 @@
+Started using the Flask Python Framework.
+Updated the look and feel of the Website.
+Added a DEMO page with ChatGPT integration.
